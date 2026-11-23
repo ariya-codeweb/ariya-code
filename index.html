@@ -1,104 +1,202 @@
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#050510">
-<meta name="description" content="Ariya.code — راه‌های ارتباطی">
-<title>Ariya.code | Contact</title>
+<title>Ariya.code | راه‌های ارتباطی</title>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap');
-:root{--cyan:#26d9ff;--blue:#2878ff;--violet:#8b39ff;--pink:#e34dff;--ink:#050510;--white:#f7f7ff}
 *{box-sizing:border-box}
 html,body{width:100%;height:100%;margin:0;overflow:hidden}
-body{font-family:Vazirmatn,Tahoma,sans-serif;color:var(--white);display:grid;place-items:center;padding:clamp(10px,2.8vw,24px);background:radial-gradient(ellipse at 50% 48%,#17103a 0,#0b0b20 37%,#050510 78%);isolation:isolate;position:relative}
-#codefield{position:fixed;inset:0;width:100%;height:100%;z-index:-1;opacity:.92}
-.aurora{position:fixed;inset:-35%;z-index:-2;pointer-events:none;background:conic-gradient(from 0deg at 50% 50%,transparent 0 18%,rgba(32,115,255,.15) 25%,transparent 34%,rgba(166,42,255,.18) 47%,transparent 59%,rgba(0,220,255,.13) 72%,transparent 84%);filter:blur(45px);animation:aurora 24s linear infinite}
-.gridglow{position:fixed;inset:0;z-index:-1;pointer-events:none;background-image:linear-gradient(rgba(91,113,255,.075) 1px,transparent 1px),linear-gradient(90deg,rgba(91,113,255,.075) 1px,transparent 1px);background-size:42px 42px;mask-image:radial-gradient(ellipse at center,#000 8%,transparent 78%);opacity:.55}
-
-.section-title{
-  width:100%;
-  font-size:clamp(17px,4.5vw,21px);
-  font-weight:800;
-  margin-bottom:clamp(13px,2.5vh,20px);
-  padding:11px 8px;
-  color:#fff;
-  border:1px solid rgba(85,190,255,.3);
-  border-radius:14px;
-  background:linear-gradient(100deg,rgba(20,180,255,.13),rgba(130,60,255,.2),rgba(20,180,255,.13));
-  text-shadow:0 0 12px #4c9dff,0 0 25px #9b4dff;
-  box-shadow:0 0 22px rgba(65,105,255,.16),inset 0 0 18px rgba(100,90,255,.1);
-  animation:titleGlow 4s ease-in-out infinite alternate;
-}
-@keyframes titleGlow{
-  from{box-shadow:0 0 12px rgba(45,170,255,.15),inset 0 0 10px rgba(100,90,255,.08)}
-  to{box-shadow:0 0 28px rgba(120,65,255,.32),inset 0 0 20px rgba(45,190,255,.13)}
-}
 body{
-  background:
-    radial-gradient(ellipse at 15% 20%,rgba(0,180,255,.22),transparent 35%),
-    radial-gradient(ellipse at 85% 75%,rgba(153,40,255,.25),transparent 38%),
-    radial-gradient(ellipse at 50% 50%,#171039 0%,#08091d 48%,#03030b 100%);
+ font-family:Vazirmatn,Tahoma,sans-serif;
+ color:#fff;
+ display:grid;
+ place-items:center;
+ padding:16px;
+ background:
+ radial-gradient(ellipse at 12% 15%,#073b70 0,transparent 34%),
+ radial-gradient(ellipse at 90% 82%,#42106d 0,transparent 38%),
+ radial-gradient(ellipse at 50% 50%,#151037 0,#08091b 48%,#03030a 100%);
+ position:relative;
+ isolation:isolate;
 }
+#codefield{position:fixed;inset:0;width:100%;height:100%;z-index:-1}
 .aurora{
-  background:
-    conic-gradient(from 0deg at 50% 50%,
-    transparent 0 12%,
-    rgba(0,210,255,.22) 20%,
-    transparent 32%,
-    rgba(160,50,255,.25) 48%,
-    transparent 60%,
-    rgba(20,110,255,.2) 75%,
-    transparent 88%);
-  filter:blur(55px);
+ position:fixed;inset:-45%;z-index:-2;pointer-events:none;
+ background:conic-gradient(from 0deg at 50% 50%,
+ transparent 0 12%,#00c8ff30 20%,transparent 32%,
+ #a02cff38 48%,transparent 60%,#176dff35 75%,transparent 88%);
+ filter:blur(55px);
+ animation:aurora 24s linear infinite;
 }
 .gridglow{
-  background-size:34px 34px;
-  opacity:.75;
+ position:fixed;inset:0;z-index:-1;pointer-events:none;
+ background-image:
+ linear-gradient(#7188ff12 1px,transparent 1px),
+ linear-gradient(90deg,#7188ff12 1px,transparent 1px);
+ background-size:36px 36px;
+ mask-image:radial-gradient(ellipse at center,#000 5%,transparent 80%);
 }
-
- @keyframes aurora{to{transform:rotate(360deg)}}
-main{width:min(100%,450px);max-height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;position:relative;isolation:isolate;padding:clamp(16px,3.5vh,30px) clamp(15px,4vw,27px);border-radius:30px;border:1px solid rgba(145,151,255,.28);background:linear-gradient(145deg,rgba(19,20,49,.83),rgba(8,8,24,.88) 58%,rgba(19,10,43,.86));backdrop-filter:blur(18px);box-shadow:0 22px 85px #0009,0 0 50px #573aff27,inset 0 1px #ffffff16;overflow:hidden}
-main:before{content:"";position:absolute;inset:0;border-radius:inherit;padding:1px;background:linear-gradient(130deg,#31d9ff88,#8246ff88,transparent 43%,#e34dff66,#26d9ff88);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none}
-.logo-wrap{width:clamp(130px,27vh,190px);height:clamp(130px,27vh,190px);flex:0 0 auto;position:relative;display:grid;place-items:center;margin-bottom:clamp(10px,2.4vh,19px)}
-.logo-wrap:before,.logo-wrap:after{content:"";position:absolute;border-radius:50%;inset:-9px;border:2px solid transparent;border-top-color:#b04dff;border-right-color:#26d9ff;filter:drop-shadow(0 0 7px #6b4dff);animation:orbit 7s linear infinite}
-.logo-wrap:after{inset:-17px;border-width:1px;border-top-color:#25d7ff;border-bottom-color:#8b39ff;border-right-color:transparent;animation:orbitBack 11s linear infinite}
-.orbit-dot{position:absolute;width:8px;height:8px;top:4px;left:18%;border-radius:50%;background:#5deaff;box-shadow:0 0 13px 4px #2dbdff;animation:orbit 7s linear infinite}
+@keyframes aurora{to{transform:rotate(360deg)}}
+main{
+ width:min(100%,450px);
+ max-height:100%;
+ display:flex;
+ flex-direction:column;
+ align-items:center;
+ justify-content:center;
+ text-align:center;
+ position:relative;
+ padding:clamp(14px,3vh,26px);
+ border-radius:29px;
+ border:1px solid #929cff45;
+ background:linear-gradient(145deg,#171936eF,#09091feF 60%,#1b1035eF);
+ backdrop-filter:blur(20px);
+ box-shadow:0 22px 85px #000b,0 0 55px #583aff35,inset 0 1px #ffffff19;
+ overflow:hidden;
+}
+main:before{
+ content:"";position:absolute;inset:0;border-radius:inherit;
+ padding:1px;
+ background:linear-gradient(130deg,#31d9ff,#8246ff,transparent 43%,#e34dff,#26d9ff);
+ -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
+ -webkit-mask-composite:xor;mask-composite:exclude;
+ pointer-events:none;
+}
+.section-title{
+ width:100%;
+ font-size:clamp(17px,4.5vw,21px);
+ font-weight:800;
+ margin-bottom:clamp(14px,2.5vh,20px);
+ padding:11px 8px;
+ color:#fff;
+ border:1px solid #55beff55;
+ border-radius:14px;
+ background:linear-gradient(100deg,#14b4ff22,#823cff35,#14b4ff22);
+ text-shadow:0 0 12px #4c9dff,0 0 25px #9b4dff;
+ box-shadow:0 0 22px #4169ff29,inset 0 0 18px #645aff19;
+ animation:titleGlow 4s ease-in-out infinite alternate;
+}
+@keyframes titleGlow{
+ from{box-shadow:0 0 12px #2daaff25,inset 0 0 10px #645aff15}
+ to{box-shadow:0 0 28px #7841ff55,inset 0 0 20px #2dbdff30}
+}
+.logo-wrap{
+ width:clamp(125px,26vh,180px);
+ height:clamp(125px,26vh,180px);
+ flex:0 0 auto;
+ position:relative;
+ display:grid;
+ place-items:center;
+ margin-bottom:clamp(12px,2.4vh,19px);
+}
+.logo-wrap:before,.logo-wrap:after{
+ content:"";position:absolute;border-radius:50%;inset:-9px;
+ border:2px solid transparent;
+ border-top-color:#b04dff;border-right-color:#26d9ff;
+ filter:drop-shadow(0 0 7px #6b4dff);
+ animation:orbit 7s linear infinite;
+}
+.logo-wrap:after{
+ inset:-17px;border-width:1px;
+ border-top-color:#25d7ff;border-bottom-color:#8b39ff;
+ animation:orbitBack 11s linear infinite;
+}
+.orbit-dot{
+ position:absolute;width:8px;height:8px;top:4px;left:18%;
+ border-radius:50%;background:#5deaff;
+ box-shadow:0 0 13px 4px #2dbdff;
+ animation:orbit 7s linear infinite;
+}
 @keyframes orbit{to{transform:rotate(360deg)}}
 @keyframes orbitBack{to{transform:rotate(-360deg)}}
-.logo{display:block;width:100%;height:100%;object-fit:contain;border-radius:50%;position:relative;z-index:1;filter:drop-shadow(0 0 18px #3c70ff66)}
-h1{font:800 clamp(30px,7vw,39px)/1 Arial,sans-serif;direction:ltr;margin:0;letter-spacing:-1px;text-shadow:0 0 25px #755aff30}
-.name{color:#fff}
-.code{background:linear-gradient(95deg,#21d9ff,#397bff 46%,#b64bff);-webkit-background-clip:text;background-clip:text;color:transparent}
-.tagline{font:500 clamp(10px,2.7vw,13px)/1.5 Arial,sans-serif;direction:ltr;letter-spacing:1.1px;color:#c8d4ff;margin:9px 0 clamp(14px,3vh,22px)}
-.separator{height:2px;width:74px;border-radius:9px;background:linear-gradient(90deg,#24dfff,#536bff,#b64aff);box-shadow:0 0 18px #7352ff8c;margin-bottom:clamp(14px,3vh,22px)}
-.links{width:100%;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
-a.link{min-width:0;min-height:clamp(74px,12vh,88px);padding:10px 4px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:7px;text-decoration:none;color:#f5f6ff;border:1px solid #889cff35;border-radius:17px;background:linear-gradient(145deg,#243d714d,#30205255 65%,#142d4a55);box-shadow:inset 0 1px #ffffff12;transition:transform .22s,border-color .22s,box-shadow .22s}
-a.link:hover{transform:translateY(-4px);border-color:#4bdfffaa;box-shadow:0 8px 26px #386aff30,0 0 18px #9a45ff20}
-.icon{width:34px;height:34px;display:grid;place-items:center;border-radius:11px;color:#d9f8ff;background:linear-gradient(135deg,#19bfff38,#9b43ff55);border:1px solid #a4baff35;box-shadow:0 0 16px #5c7dff20}
-.icon svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-a.link strong{font-size:clamp(10px,2.8vw,12px);font-weight:600;white-space:nowrap}
-.phone{font:12px Arial,sans-serif;direction:ltr;color:#c9d5ff;margin-top:clamp(12px,2.7vh,19px);letter-spacing:.5px}
-footer{font:9px Arial,sans-serif;direction:ltr;letter-spacing:2.4px;color:#7783b4;margin-top:10px}
-@media(max-height:620px){
-main{padding:10px 17px;border-radius:23px}
-.logo-wrap{width:105px;height:105px;margin-bottom:8px}
-.logo-wrap:after{inset:-13px}
-.tagline{margin:5px 0 9px}
-.separator{margin-bottom:9px}
-a.link{min-height:62px;padding:6px 3px;gap:4px}
-.icon{width:28px;height:28px}
-.phone{margin-top:8px}
-footer{margin-top:6px}
+.logo{
+ display:block;width:100%;height:100%;
+ object-fit:contain;border-radius:50%;
+ position:relative;z-index:1;
+ filter:drop-shadow(0 0 18px #3c70ff66);
+}
+h1{
+ font:800 clamp(30px,7vw,39px)/1 Arial,sans-serif;
+ direction:ltr;margin:0;letter-spacing:-1px;
+ text-shadow:0 0 25px #755aff30;
+}
+.code{
+ background:linear-gradient(95deg,#21d9ff,#397bff 46%,#b64bff);
+ -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.tagline{
+ font:500 clamp(10px,2.7vw,13px)/1.5 Arial,sans-serif;
+ direction:ltr;letter-spacing:1.1px;color:#c8d4ff;
+ margin:9px 0 clamp(14px,3vh,22px);
+}
+.separator{
+ height:2px;width:74px;border-radius:9px;
+ background:linear-gradient(90deg,#24dfff,#536bff,#b64aff);
+ box-shadow:0 0 18px #7352ff8c;
+ margin-bottom:clamp(14px,3vh,22px);
+}
+.links{
+ width:100%;display:grid;
+ grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;
+}
+a.link{
+ min-width:0;min-height:clamp(74px,12vh,88px);
+ padding:10px 4px;
+ display:flex;flex-direction:column;
+ justify-content:center;align-items:center;gap:7px;
+ text-decoration:none;color:#f5f6ff;
+ border:1px solid #889cff45;border-radius:17px;
+ background:linear-gradient(145deg,#243d7155,#30205266 65%,#142d4a66);
+ box-shadow:inset 0 1px #ffffff15;
+ transition:transform .22s,border-color .22s,box-shadow .22s;
+}
+a.link:hover{
+ transform:translateY(-4px);
+ border-color:#4bdfff;
+ box-shadow:0 8px 26px #386aff45,0 0 18px #9a45ff30;
+}
+.icon{
+ width:34px;height:34px;display:grid;place-items:center;
+ border-radius:11px;color:#d9f8ff;
+ background:linear-gradient(135deg,#19bfff45,#9b43ff66);
+ border:1px solid #a4baff55;
+}
+.icon svg{
+ width:19px;height:19px;fill:none;stroke:currentColor;
+ stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;
+}
+a.link strong{font-size:clamp(10px,2.8vw,12px);font-weight:600}
+.phone{
+ font:12px Arial,sans-serif;direction:ltr;
+ color:#c9d5ff;margin-top:clamp(12px,2.7vh,19px);
+ letter-spacing:.5px;
+}
+footer{
+ font:9px Arial,sans-serif;direction:ltr;
+ letter-spacing:2.4px;color:#8995c9;margin-top:10px;
+}
+@media(max-height:650px){
+ main{padding:10px 17px;border-radius:23px}
+ .section-title{margin-bottom:9px;padding:7px}
+ .logo-wrap{width:100px;height:100px;margin-bottom:7px}
+ .logo-wrap:after{inset:-13px}
+ .tagline{margin:5px 0 9px}
+ .separator{margin-bottom:9px}
+ a.link{min-height:60px;padding:6px 3px;gap:4px}
+ .icon{width:28px;height:28px}
+ .phone{margin-top:8px}
+ footer{margin-top:6px}
 }
 @media(max-width:350px){
-.links{gap:6px}
-a.link{border-radius:13px}
-.logo-wrap{width:116px;height:116px}
+ .links{gap:6px}
+ a.link{border-radius:13px}
 }
 @media(prefers-reduced-motion:reduce){
-*,*:before,*:after{animation:none!important;transition:none!important}
+ *,*:before,*:after{animation:none!important;transition:none!important}
 }
 </style>
 </head>
@@ -106,16 +204,19 @@ a.link{border-radius:13px}
 <div class="aurora"></div>
 <div class="gridglow"></div>
 <canvas id="codefield" aria-hidden="true"></canvas>
-<main>
+
 <main>
  <div class="section-title">راه‌های ارتباطی:</div>
+
  <div class="logo-wrap">
   <span class="orbit-dot"></span>
-  <img class="logo" src="assets/ariya-logo.png" alt="لوگوی اصلی Ariya.code">
+  <img class="logo" src="assets/ariya-logo.png" alt="لوگوی Ariya.code">
  </div>
- <h1><span class="name">Ariya.</span><span class="code">code</span></h1>
+
+ <h1><span>Ariya.</span><span class="code">code</span></h1>
  <p class="tagline">WEB DESIGN &amp; DEVELOPMENT</p>
  <div class="separator"></div>
+
  <nav class="links" aria-label="راه‌های ارتباطی">
   <a class="link" href="tel:+989370770905">
    <span class="icon">
@@ -123,12 +224,14 @@ a.link{border-radius:13px}
    </span>
    <strong>تماس</strong>
   </a>
+
   <a class="link" href="https://wa.me/message/X6SDMN52FFCDF1" target="_blank" rel="noopener">
    <span class="icon">
     <svg viewBox="0 0 24 24"><path d="M20 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20l1.2-4.1A8.5 8.5 0 1 1 20 11.5Z"/><path d="M8.5 8.5c.5 2.5 2.5 4.5 5 5l1-1 2 1"/></svg>
    </span>
    <strong>واتساپ</strong>
   </a>
+
   <a class="link" href="https://www.instagram.com/ariya.cod/" target="_blank" rel="noopener">
    <span class="icon">
     <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></svg>
@@ -136,41 +239,46 @@ a.link{border-radius:13px}
    <strong>اینستاگرام</strong>
   </a>
  </nav>
+
  <div class="phone">+98 937 077 0905</div>
  <footer>© ARIYA.CODE</footer>
 </main>
+
 <script>
 (()=>{
-const c=document.getElementById('codefield'),ctx=c.getContext('2d');
+const c=document.getElementById('codefield');
+const ctx=c.getContext('2d');
 let w,h,dpr,items=[];
 const symbols=['</>','{ }','const','=>','0101','<div>','PHP','CSS','JS',';','&&','[ ]'];
+
 function resize(){
-dpr=Math.min(devicePixelRatio||1,2);
-w=innerWidth;h=innerHeight;
-c.width=w*dpr;c.height=h*dpr;
-c.style.width=w+'px';c.style.height=h+'px';
-ctx.setTransform(dpr,0,0,dpr,0,0);
-let count=Math.max(18,Math.min(42,Math.floor(w*h/26000)));
-items=Array.from({length:count},(_,i)=>({
-x:Math.random()*w,y:Math.random()*h,
-s:10+Math.random()*10,v:.12+Math.random()*.35,
-a:.12+Math.random()*.27,t:symbols[i%symbols.length],
-hue:Math.random()<.5?190+Math.random()*35:255+Math.random()*65
-}));
+ dpr=Math.min(devicePixelRatio||1,2);
+ w=innerWidth;h=innerHeight;
+ c.width=w*dpr;c.height=h*dpr;
+ c.style.width=w+'px';c.style.height=h+'px';
+ ctx.setTransform(dpr,0,0,dpr,0,0);
+ let count=Math.max(18,Math.min(48,Math.floor(w*h/22000)));
+ items=Array.from({length:count},(_,i)=>({
+  x:Math.random()*w,y:Math.random()*h,
+  s:10+Math.random()*10,v:.12+Math.random()*.35,
+  a:.12+Math.random()*.27,
+  t:symbols[i%symbols.length],
+  hue:Math.random()<.5?190+Math.random()*35:255+Math.random()*65
+ }));
 }
 function draw(){
-ctx.clearRect(0,0,w,h);
-for(const p of items){
-p.y-=p.v;
-if(p.y<-30){p.y=h+25;p.x=Math.random()*w}
-ctx.font=`500 ${p.s}px monospace`;
-ctx.fillStyle=`hsla(${p.hue},100%,72%,${p.a})`;
-ctx.shadowBlur=12;
-ctx.shadowColor=`hsla(${p.hue},100%,60%,.45)`;
-ctx.fillText(p.t,p.x,p.y);
-}
-ctx.shadowBlur=0;
-requestAnimationFrame(draw);
+ ctx.clearRect(0,0,w,h);
+ for(const p of items){
+  p.y-=p.v;
+  if(p.y<-30){p.y=h+25;p.x=Math.random()*w}
+  ctx.font=`500 ${p.s}px monospace`;
+  ctx.fillStyle=`hsla(${p.hue},100%,72%,${p.a})`;
+  ctx.shadowBlur=12;
+  ctx.shadowColor=`hsla(${p.hue},100%,60%,.45)`;
+  ctx.fillText(p.t,p.x,p.y);
+ }
+ ctx.shadowBlur=0;
+ requestAnimationFrame(draw);
 }
 addEventListener('resize',resize);
 resize();draw();
@@ -178,4 +286,3 @@ resize();draw();
 </script>
 </body>
 </html>
-

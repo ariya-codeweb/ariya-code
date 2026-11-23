@@ -1,288 +1,367 @@
-
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#050510">
-<title>Ariya.code | راه‌های ارتباطی</title>
-<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<style>
-*{box-sizing:border-box}
-html,body{width:100%;height:100%;margin:0;overflow:hidden}
-body{
- font-family:Vazirmatn,Tahoma,sans-serif;
- color:#fff;
- display:grid;
- place-items:center;
- padding:16px;
- background:
- radial-gradient(ellipse at 12% 15%,#073b70 0,transparent 34%),
- radial-gradient(ellipse at 90% 82%,#42106d 0,transparent 38%),
- radial-gradient(ellipse at 50% 50%,#151037 0,#08091b 48%,#03030a 100%);
- position:relative;
- isolation:isolate;
-}
-#codefield{position:fixed;inset:0;width:100%;height:100%;z-index:-1}
-.aurora{
- position:fixed;inset:-45%;z-index:-2;pointer-events:none;
- background:conic-gradient(from 0deg at 50% 50%,
- transparent 0 12%,#00c8ff30 20%,transparent 32%,
- #a02cff38 48%,transparent 60%,#176dff35 75%,transparent 88%);
- filter:blur(55px);
- animation:aurora 24s linear infinite;
-}
-.gridglow{
- position:fixed;inset:0;z-index:-1;pointer-events:none;
- background-image:
- linear-gradient(#7188ff12 1px,transparent 1px),
- linear-gradient(90deg,#7188ff12 1px,transparent 1px);
- background-size:36px 36px;
- mask-image:radial-gradient(ellipse at center,#000 5%,transparent 80%);
-}
-@keyframes aurora{to{transform:rotate(360deg)}}
-main{
- width:min(100%,450px);
- max-height:100%;
- display:flex;
- flex-direction:column;
- align-items:center;
- justify-content:center;
- text-align:center;
- position:relative;
- padding:clamp(14px,3vh,26px);
- border-radius:29px;
- border:1px solid #929cff45;
- background:linear-gradient(145deg,#171936eF,#09091feF 60%,#1b1035eF);
- backdrop-filter:blur(20px);
- box-shadow:0 22px 85px #000b,0 0 55px #583aff35,inset 0 1px #ffffff19;
- overflow:hidden;
-}
-main:before{
- content:"";position:absolute;inset:0;border-radius:inherit;
- padding:1px;
- background:linear-gradient(130deg,#31d9ff,#8246ff,transparent 43%,#e34dff,#26d9ff);
- -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
- -webkit-mask-composite:xor;mask-composite:exclude;
- pointer-events:none;
-}
-.section-title{
- width:100%;
- font-size:clamp(17px,4.5vw,21px);
- font-weight:800;
- margin-bottom:clamp(14px,2.5vh,20px);
- padding:11px 8px;
- color:#fff;
- border:1px solid #55beff55;
- border-radius:14px;
- background:linear-gradient(100deg,#14b4ff22,#823cff35,#14b4ff22);
- text-shadow:0 0 12px #4c9dff,0 0 25px #9b4dff;
- box-shadow:0 0 22px #4169ff29,inset 0 0 18px #645aff19;
- animation:titleGlow 4s ease-in-out infinite alternate;
-}
-@keyframes titleGlow{
- from{box-shadow:0 0 12px #2daaff25,inset 0 0 10px #645aff15}
- to{box-shadow:0 0 28px #7841ff55,inset 0 0 20px #2dbdff30}
-}
-.logo-wrap{
- width:clamp(125px,26vh,180px);
- height:clamp(125px,26vh,180px);
- flex:0 0 auto;
- position:relative;
- display:grid;
- place-items:center;
- margin-bottom:clamp(12px,2.4vh,19px);
-}
-.logo-wrap:before,.logo-wrap:after{
- content:"";position:absolute;border-radius:50%;inset:-9px;
- border:2px solid transparent;
- border-top-color:#b04dff;border-right-color:#26d9ff;
- filter:drop-shadow(0 0 7px #6b4dff);
- animation:orbit 7s linear infinite;
-}
-.logo-wrap:after{
- inset:-17px;border-width:1px;
- border-top-color:#25d7ff;border-bottom-color:#8b39ff;
- animation:orbitBack 11s linear infinite;
-}
-.orbit-dot{
- position:absolute;width:8px;height:8px;top:4px;left:18%;
- border-radius:50%;background:#5deaff;
- box-shadow:0 0 13px 4px #2dbdff;
- animation:orbit 7s linear infinite;
-}
-@keyframes orbit{to{transform:rotate(360deg)}}
-@keyframes orbitBack{to{transform:rotate(-360deg)}}
-.logo{
- display:block;width:100%;height:100%;
- object-fit:contain;border-radius:50%;
- position:relative;z-index:1;
- filter:drop-shadow(0 0 18px #3c70ff66);
-}
-h1{
- font:800 clamp(30px,7vw,39px)/1 Arial,sans-serif;
- direction:ltr;margin:0;letter-spacing:-1px;
- text-shadow:0 0 25px #755aff30;
-}
-.code{
- background:linear-gradient(95deg,#21d9ff,#397bff 46%,#b64bff);
- -webkit-background-clip:text;background-clip:text;color:transparent;
-}
-.tagline{
- font:500 clamp(10px,2.7vw,13px)/1.5 Arial,sans-serif;
- direction:ltr;letter-spacing:1.1px;color:#c8d4ff;
- margin:9px 0 clamp(14px,3vh,22px);
-}
-.separator{
- height:2px;width:74px;border-radius:9px;
- background:linear-gradient(90deg,#24dfff,#536bff,#b64aff);
- box-shadow:0 0 18px #7352ff8c;
- margin-bottom:clamp(14px,3vh,22px);
-}
-.links{
- width:100%;display:grid;
- grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;
-}
-a.link{
- min-width:0;min-height:clamp(74px,12vh,88px);
- padding:10px 4px;
- display:flex;flex-direction:column;
- justify-content:center;align-items:center;gap:7px;
- text-decoration:none;color:#f5f6ff;
- border:1px solid #889cff45;border-radius:17px;
- background:linear-gradient(145deg,#243d7155,#30205266 65%,#142d4a66);
- box-shadow:inset 0 1px #ffffff15;
- transition:transform .22s,border-color .22s,box-shadow .22s;
-}
-a.link:hover{
- transform:translateY(-4px);
- border-color:#4bdfff;
- box-shadow:0 8px 26px #386aff45,0 0 18px #9a45ff30;
-}
-.icon{
- width:34px;height:34px;display:grid;place-items:center;
- border-radius:11px;color:#d9f8ff;
- background:linear-gradient(135deg,#19bfff45,#9b43ff66);
- border:1px solid #a4baff55;
-}
-.icon svg{
- width:19px;height:19px;fill:none;stroke:currentColor;
- stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;
-}
-a.link strong{font-size:clamp(10px,2.8vw,12px);font-weight:600}
-.phone{
- font:12px Arial,sans-serif;direction:ltr;
- color:#c9d5ff;margin-top:clamp(12px,2.7vh,19px);
- letter-spacing:.5px;
-}
-footer{
- font:9px Arial,sans-serif;direction:ltr;
- letter-spacing:2.4px;color:#8995c9;margin-top:10px;
-}
-@media(max-height:650px){
- main{padding:10px 17px;border-radius:23px}
- .section-title{margin-bottom:9px;padding:7px}
- .logo-wrap{width:100px;height:100px;margin-bottom:7px}
- .logo-wrap:after{inset:-13px}
- .tagline{margin:5px 0 9px}
- .separator{margin-bottom:9px}
- a.link{min-height:60px;padding:6px 3px;gap:4px}
- .icon{width:28px;height:28px}
- .phone{margin-top:8px}
- footer{margin-top:6px}
-}
-@media(max-width:350px){
- .links{gap:6px}
- a.link{border-radius:13px}
-}
-@media(prefers-reduced-motion:reduce){
- *,*:before,*:after{animation:none!important;transition:none!important}
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#070711">
+  <meta name="description" content="Ariya.code | ارتباط با ما">
+  <title>Ariya.code | Digital Experience</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --blue: #55cfff;
+      --purple: #a77bff;
+      --gold: #e8c98b;
+      --white: #f5f2ff;
+    }
+
+    body {
+      min-height: 100vh;
+      background: #070711;
+      color: var(--white);
+      font-family: Tahoma, Arial, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow-x: hidden;
+      padding: 35px 18px;
+      position: relative;
+    }
+
+    body::before,
+    body::after {
+      content: "";
+      position: fixed;
+      width: 380px;
+      height: 380px;
+      border-radius: 50%;
+      filter: blur(110px);
+      opacity: .22;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    body::before {
+      background: #4b35ff;
+      top: -170px;
+      right: -130px;
+    }
+
+    body::after {
+      background: #008dca;
+      bottom: -190px;
+      left: -120px;
+    }
+
+    .stars {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: .3;
+      background-image:
+        radial-gradient(1px 1px at 10% 20%, white 100%, transparent),
+        radial-gradient(1px 1px at 80% 15%, white 100%, transparent),
+        radial-gradient(1px 1px at 40% 75%, white 100%, transparent),
+        radial-gradient(2px 2px at 90% 80%, white 100%, transparent),
+        radial-gradient(1px 1px at 25% 55%, white 100%, transparent);
+      background-size: 190px 190px;
+      z-index: 0;
+    }
+
+    .page {
+      width: 100%;
+      max-width: 490px;
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      animation: appear 1s ease both;
+    }
+
+    @keyframes appear {
+      from {
+        opacity: 0;
+        transform: translateY(25px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .top-label {
+      color: var(--gold);
+      font-size: 10px;
+      letter-spacing: 5px;
+      direction: ltr;
+      margin-bottom: 23px;
+      opacity: .9;
+    }
+
+    .logo-area {
+      width: 180px;
+      height: 180px;
+      margin: 0 auto 20px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .logo-area::before,
+    .logo-area::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      border: 1px solid transparent;
+      border-top-color: var(--blue);
+      border-bottom-color: var(--purple);
+      animation: rotate 9s linear infinite;
+    }
+
+    .logo-area::after {
+      inset: 9px;
+      border-top-color: var(--gold);
+      border-bottom-color: transparent;
+      animation-direction: reverse;
+      animation-duration: 13s;
+      opacity: .7;
+    }
+
+    @keyframes rotate {
+      to { transform: rotate(360deg); }
+    }
+
+    .logo {
+      width: 125px;
+      max-height: 125px;
+      object-fit: contain;
+      position: relative;
+      z-index: 2;
+      filter: drop-shadow(0 0 18px #6b6aff55);
+    }
+
+    h1 {
+      font-size: 29px;
+      letter-spacing: 1px;
+      direction: ltr;
+      margin-bottom: 9px;
+      background: linear-gradient(90deg, #ffffff, #9edfff, #c5a4ff);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .subtitle {
+      font-size: 11px;
+      color: #aaa8c4;
+      letter-spacing: 2px;
+      direction: ltr;
+      margin-bottom: 35px;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      color: var(--gold);
+      font-size: 15px;
+      margin-bottom: 17px;
+    }
+
+    .section-title::before,
+    .section-title::after {
+      content: "";
+      height: 1px;
+      width: 48px;
+      background: linear-gradient(90deg, transparent, var(--gold));
+    }
+
+    .section-title::after {
+      transform: rotate(180deg);
+    }
+
+    .contact-box {
+      padding: 24px 20px;
+      border-radius: 25px;
+      border: 1px solid #ffffff20;
+      background: linear-gradient(
+        145deg,
+        #ffffff0d,
+        #ffffff04
+      );
+      box-shadow:
+        0 20px 70px #00000070,
+        inset 0 1px 0 #ffffff12,
+        0 0 35px #765bff12;
+      backdrop-filter: blur(18px);
+    }
+
+    .contact-link {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      text-decoration: none;
+      color: white;
+      padding: 15px;
+      margin-bottom: 12px;
+      border-radius: 16px;
+      border: 1px solid #ffffff12;
+      background: #ffffff07;
+      transition: .3s ease;
+      text-align: right;
+    }
+
+    .contact-link:last-child {
+      margin-bottom: 0;
+    }
+
+    .contact-link:hover {
+      transform: translateY(-3px);
+      border-color: #9b8cff77;
+      background: #ffffff12;
+      box-shadow: 0 8px 25px #7964ff20;
+    }
+
+    .contact-icon {
+      width: 43px;
+      height: 43px;
+      flex-shrink: 0;
+      border-radius: 13px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      background: linear-gradient(135deg, #4a9dff30, #9b6aff30);
+      border: 1px solid #a9a0ff30;
+    }
+
+    .contact-info {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .contact-info strong {
+      display: block;
+      font-size: 13px;
+      margin-bottom: 5px;
+      color: #fff;
+    }
+
+    .contact-info span {
+      display: block;
+      font-size: 11px;
+      color: #aaa9c2;
+      direction: ltr;
+      text-align: right;
+    }
+
+    .arrow {
+      color: var(--gold);
+      font-size: 18px;
+      opacity: .8;
+    }
+
+    .footer {
+      margin-top: 27px;
+      color: #77758e;
+      font-size: 10px;
+      letter-spacing: 1px;
+      direction: ltr;
+    }
+
+    .footer span {
+      color: var(--gold);
+    }
+
+    @media (max-width: 380px) {
+      .logo-area {
+        width: 150px;
+        height: 150px;
+      }
+
+      .logo {
+        width: 105px;
+      }
+
+      h1 {
+        font-size: 25px;
+      }
+
+      .contact-box {
+        padding: 18px 14px;
+      }
+    }
+  </style>
 </head>
+
 <body>
-<div class="aurora"></div>
-<div class="gridglow"></div>
-<canvas id="codefield" aria-hidden="true"></canvas>
+  <div class="stars"></div>
 
-<main>
- <div class="section-title">راه‌های ارتباطی:</div>
+  <main class="page">
 
- <div class="logo-wrap">
-  <span class="orbit-dot"></span>
-  <img class="logo" src="assets/ariya-logo.png" alt="لوگوی Ariya.code">
- </div>
+    <div class="top-label">WELCOME TO MY DIGITAL WORLD</div>
 
- <h1><span>Ariya.</span><span class="code">code</span></h1>
- <p class="tagline">WEB DESIGN &amp; DEVELOPMENT</p>
- <div class="separator"></div>
+    <div class="logo-area">
+      <img
+        class="logo"
+        src="1000115799.png"
+        alt="Ariya.code Logo"
+      >
+    </div>
 
- <nav class="links" aria-label="راه‌های ارتباطی">
-  <a class="link" href="tel:+989370770905">
-   <span class="icon">
-    <svg viewBox="0 0 24 24"><path d="M5 3h3l2 5-2 1.5a15 15 0 0 0 6.5 6.5L16 14l5 2v3a2 2 0 0 1-2 2C10 21 3 14 3 5a2 2 0 0 1 2-2Z"/></svg>
-   </span>
-   <strong>تماس</strong>
-  </a>
+    <h1>Ariya.code</h1>
+    <div class="subtitle">DESIGN • DEVELOPMENT • DIGITAL</div>
 
-  <a class="link" href="https://wa.me/message/X6SDMN52FFCDF1" target="_blank" rel="noopener">
-   <span class="icon">
-    <svg viewBox="0 0 24 24"><path d="M20 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20l1.2-4.1A8.5 8.5 0 1 1 20 11.5Z"/><path d="M8.5 8.5c.5 2.5 2.5 4.5 5 5l1-1 2 1"/></svg>
-   </span>
-   <strong>واتساپ</strong>
-  </a>
+    <div class="section-title">راه‌های ارتباطی</div>
 
-  <a class="link" href="https://www.instagram.com/ariya.cod/" target="_blank" rel="noopener">
-   <span class="icon">
-    <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></svg>
-   </span>
-   <strong>اینستاگرام</strong>
-  </a>
- </nav>
+    <section class="contact-box">
 
- <div class="phone">+98 937 077 0905</div>
- <footer>© ARIYA.CODE</footer>
-</main>
+      <a class="contact-link" href="tel:+989370770905">
+        <div class="contact-icon">☎</div>
+        <div class="contact-info">
+          <strong>تماس تلفنی</strong>
+          <span>+98 937 077 0905</span>
+        </div>
+        <div class="arrow">←</div>
+      </a>
 
-<script>
-(()=>{
-const c=document.getElementById('codefield');
-const ctx=c.getContext('2d');
-let w,h,dpr,items=[];
-const symbols=['</>','{ }','const','=>','0101','<div>','PHP','CSS','JS',';','&&','[ ]'];
+      <a class="contact-link"
+         href="https://www.instagram.com/ariya.cod/"
+         target="_blank" rel="noopener noreferrer">
+        <div class="contact-icon">◎</div>
+        <div class="contact-info">
+          <strong>اینستاگرام</strong>
+          <span>@ariya.cod</span>
+        </div>
+        <div class="arrow">←</div>
+      </a>
 
-function resize(){
- dpr=Math.min(devicePixelRatio||1,2);
- w=innerWidth;h=innerHeight;
- c.width=w*dpr;c.height=h*dpr;
- c.style.width=w+'px';c.style.height=h+'px';
- ctx.setTransform(dpr,0,0,dpr,0,0);
- let count=Math.max(18,Math.min(48,Math.floor(w*h/22000)));
- items=Array.from({length:count},(_,i)=>({
-  x:Math.random()*w,y:Math.random()*h,
-  s:10+Math.random()*10,v:.12+Math.random()*.35,
-  a:.12+Math.random()*.27,
-  t:symbols[i%symbols.length],
-  hue:Math.random()<.5?190+Math.random()*35:255+Math.random()*65
- }));
-}
-function draw(){
- ctx.clearRect(0,0,w,h);
- for(const p of items){
-  p.y-=p.v;
-  if(p.y<-30){p.y=h+25;p.x=Math.random()*w}
-  ctx.font=`500 ${p.s}px monospace`;
-  ctx.fillStyle=`hsla(${p.hue},100%,72%,${p.a})`;
-  ctx.shadowBlur=12;
-  ctx.shadowColor=`hsla(${p.hue},100%,60%,.45)`;
-  ctx.fillText(p.t,p.x,p.y);
- }
- ctx.shadowBlur=0;
- requestAnimationFrame(draw);
-}
-addEventListener('resize',resize);
-resize();draw();
-})();
-</script>
+      <a class="contact-link"
+         href="https://wa.me/message/X6SDMN52FFCDF1"
+         target="_blank" rel="noopener noreferrer">
+        <div class="contact-icon">◉</div>
+        <div class="contact-info">
+          <strong>واتساپ</strong>
+          <span>ارتباط مستقیم با ما</span>
+        </div>
+        <div class="arrow">←</div>
+      </a>
+
+    </section>
+
+    <footer class="footer">
+      CRAFTED WITH <span>✦</span> BY ARIYA.CODE
+    </footer>
+
+  </main>
 </body>
 </html>
